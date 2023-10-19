@@ -30,17 +30,14 @@ const AddProduct = () => {
                         button: "Add More",
                       });                   
                 }
-            })
-        console.log(product)
-       
-             
+            })      
 
     }
     return (
         <div>
             <div className="hero min-h-screen bg-base-200">       
-                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                <form onSubmit={handleSubmit} className="card-body">
+                <div className="card flex-shrink-0 w-full  shadow-2xl bg-base-100">
+                <form onSubmit={handleSubmit} className="card-body grid grid-cols-2">
                     <div className="form-control">
                     <label className="label">
                         <span className="label-text">Product Name</span>
