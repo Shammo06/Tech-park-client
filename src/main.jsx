@@ -13,6 +13,9 @@ import Registration from './Component/Registration.jsx';
 import AuthProvider from './Component/AuthContext/AuthProvider.jsx';
 import ErrorPage from './Component/ErrorPage.jsx';
 import BrandDetails from './Component/Brand/BrandDetails.jsx';
+import ViewDetails from './Component/Brand/ViewDetails.jsx';
+import Update from './Component/Brand/Update.jsx';
+import ViewCard from './Component/HomeContent/ViewCard/ViewCard.jsx';
 
 const router = createBrowserRouter([
   {
@@ -39,6 +42,19 @@ const router = createBrowserRouter([
       {
         path: "/:brand",
         element: <BrandDetails></BrandDetails>
+      },
+      {
+        path: "/update/:id",
+        element: <Update></Update>        
+      },
+      {
+        path: "/details/:id",
+        element: <ViewDetails></ViewDetails>,
+        loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`)
+      },
+      {
+        path: "/viewCard",
+        element : <ViewCard></ViewCard>
       }
 
     ]

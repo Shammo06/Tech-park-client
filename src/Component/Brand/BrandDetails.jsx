@@ -18,7 +18,7 @@ const BrandDetails = () => {
     const handleClickDetails = (id) =>{
         navigate(`/details/${id}`)
     }
-    const handleClickUpdate = () =>{
+    const handleClickUpdate = (id) =>{
         navigate(`/update/${id}`)
     }
 
