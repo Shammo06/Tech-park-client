@@ -10,11 +10,14 @@ import Home from './Component/Home.jsx';
 import AddProduct from './Component/AddProduct.jsx';
 import LogIn from './Component/LogIn.jsx';
 import Registration from './Component/Registration.jsx';
+import AuthProvider from './Component/AuthContext/AuthProvider.jsx';
+import ErrorPage from './Component/ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement: <ErrorPage></ErrorPage>,
     children :[
       {
         path: "/",
@@ -37,8 +40,10 @@ const router = createBrowserRouter([
   },
 ]);
 
+
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider><RouterProvider router={router} /></AuthProvider>
   </React.StrictMode>,
 )

@@ -1,4 +1,4 @@
-import Swal from 'sweetalert'
+import swal from 'sweetalert'
 
 const AddProduct = () => {
     const handleSubmit = e => {
@@ -23,7 +23,7 @@ const AddProduct = () => {
             .then(data => {
                 console.log(data);
                 if(data.insertedId){
-                    Swal({
+                    swal({
                         title: "Good job!",
                         text: "You Successfully Add Product",
                         icon: "success",

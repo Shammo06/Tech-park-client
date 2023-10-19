@@ -1,7 +1,12 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "./AuthContext/AuthProvider";
+import { updateProfile } from "firebase/auth";
+import swal from "sweetalert";
 
 
 const Registration = () => {
+    const {createUser} = useContext(AuthContext);
     const handleSubmit = e => {
         e.preventDefault();
         const name = e.target.name.value;
@@ -9,6 +14,42 @@ const Registration = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log(name,photo,password,email);
+
+        if (password.length < 6) {
+            swal({
+                text: "Password should be at least 6 letter",
+                timer: 2000
+              });
+            return
+        }
+        if (!/[A-Z]/.test(password)) {
+            swal({
+                text: "Password must contain at least one capital letter",
+                timer: 2000
+              })
+            return
+        }
+        if (!/[!@#$%^&*()_+\-={};':"\\|,.<>/?]+/.test(password)){
+            swal({
+                text: "Password must contain at least one special character",
+                timer: 2000
+              })
+            return
+        }    
+  
+        createUser(email,password)
+        .then(result => {
+            updateProfile(result.user, {
+                displayName: name,
+                photoURL:photo
+            })
+            console.log(result.user)   
+        })
+        .catch((error) => {
+            console.log(error.message)
+        })
+
+        
 
     }
     return (
