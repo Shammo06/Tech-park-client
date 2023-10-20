@@ -9,7 +9,7 @@ const Newsteller = () => {
             </div>
              <div className="flex">
                 <input  type="text" placeholder="Email Address" className="h-14 input-primary w-96 rounded-l-lg pl-3" />
-                <button  className="text-white h-14 bg-orange-500 w-32 rounded-r-lg">Subscribe</button>
+                <button  className="text-white h-14 bg-indigo-700 w-32 rounded-r-lg">Subscribe</button>
             </div>         
         </div>
     );

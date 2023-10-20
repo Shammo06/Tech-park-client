@@ -29,13 +29,13 @@ const Registration = () => {
               })
             return
         }
-        if (!/[!@#$%^&*()_+\-={};':"\\|,.<>/?]+/.test(password)){
-            swal({
-                text: "Password must contain at least one special character",
-                timer: 2000
-              })
-            return
-        }    
+        // if (!/[!@#$%^&*()_+\-={};':"\\|,.<>/?]+/.test(password)){
+        //     swal({
+        //         text: "Password must contain at least one special character",
+        //         timer: 2000
+        //       })
+        //     return
+        // }    
   
         createUser(email,password)
         .then(result => {
@@ -43,7 +43,7 @@ const Registration = () => {
                 displayName: name,
                 photoURL:photo
             })
-            console.log(result.user)   
+               
         })
         .catch((error) => {
             console.log(error.message)
@@ -53,8 +53,8 @@ const Registration = () => {
 
     }
     return (
-        <div>
-        <form onSubmit={handleSubmit} className="card-body w-80 md:w-96">
+        <div className="py-10 bg-purple-200 ">
+        <form onSubmit={handleSubmit} className="card-body w-80 md:w-96 bg-stone-200 mx-auto border-2 bg- border-green-500">
             <div className="form-control">
             <label className="label">
                 <span className="label-text">Your Name</span>
@@ -81,7 +81,7 @@ const Registration = () => {
            
             </div>
             <div className="form-control mt-6">
-            <button className="btn btn-warning rounded-full bg-[#ff6d4a] border-[#ff6d4a] text-[#fafcff]">Register</button>
+            <button className="btn btn-warning rounded-full bg-indigo-600  text-purple-50">Register</button>
             </div>           
             <div className="mb-6 px-9">
             <p>Already Register? <Link className="text-blue-500 font-bold" to='/logIn'>Go LogIn</Link></p> 

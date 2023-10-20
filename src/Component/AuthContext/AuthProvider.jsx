@@ -15,7 +15,7 @@ const AuthProvider = ({children}) => {
         return createUserWithEmailAndPassword(auth, email, password)
     }
     
-    const addCart = (data) =>{
+const addCart = (data) =>{
         fetch('http://localhost:5000/cart', {
             method: 'POST',
             headers: {
@@ -52,7 +52,7 @@ const AuthProvider = ({children}) => {
         }
     }, [])
 
-        const logOut = () => {
+    const logOut = () => {
         setLoading(true);
         return signOut(auth);
     }

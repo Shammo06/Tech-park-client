@@ -27,8 +27,8 @@ const LogIn = () => {
         .catch(error=>console.log(error.message))
     }
     return (
-        <div>
-        <form onSubmit={handleSubmit} className="card-body w-80 md:w-96">
+        <div className="py-10 bg-purple-200 ">
+        <form onSubmit={handleSubmit} className=" w-80 md:w-96 bg-stone-200 mx-auto card-body border-2 bg- border-green-500">
             <div className="form-control">
             <label className="label">
                 <span className="label-text">Email</span>
@@ -44,11 +44,11 @@ const LogIn = () => {
                 <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
             </label>
             </div>
-            <div className="form-control mt-6">
-            <button className="btn btn-warning rounded-full bg-[#ff6d4a] border-[#ff6d4a] text-[#fafcff]">Log In</button>
+            <div className="form-control mt-6 ">
+            <button className="btn btn-warning bg-indigo-600 rounded-full  text-purple-50">Log In</button>
             </div>
-            <div onClick={handleClick} className="form-control mt-6  rounded-full bg-[#ff6d4a] border-[#ff6d4a]">
-                <p>Sign In with Google</p>
+            <div onClick={handleClick} className="form-control mt-6 bg-indigo-600 rounded-full text-purple-50 h-12">
+                <p className="text-center font-semibold pt-3">Sign In with Google</p>
             </div>
             <div className="mb-6 px-9">
             <p>Donot Register? <Link className="text-blue-500 font-bold" to='/registration'>Go Register</Link></p> 
