@@ -3,10 +3,10 @@ import { AuthContext } from "../../AuthContext/AuthProvider";
 
 
 const ViewCard = () => {
-    const {product} = useContext(AuthContext)
+   
     return (
         <div>
-            <ul>
+            {/* <ul>
                 {
                     product.map(data => 
                         <li key={data._id}>
@@ -14,7 +14,7 @@ const ViewCard = () => {
                         </li>
                         )
                 }
-            </ul>
+            </ul> */}
         </div>
     );
 };

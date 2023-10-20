@@ -16,6 +16,8 @@ import BrandDetails from './Component/Brand/BrandDetails.jsx';
 import ViewDetails from './Component/Brand/ViewDetails.jsx';
 import Update from './Component/Brand/Update.jsx';
 import ViewCard from './Component/HomeContent/ViewCard/ViewCard.jsx';
+import PrivateRoute from './PrivateRoute/PrivateRoute.jsx';
+import NewProduct from './Component/HomeContent/NewProduct.jsx';
 
 const router = createBrowserRouter([
   {
@@ -41,7 +43,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/:brand",
-        element: <BrandDetails></BrandDetails>
+        element: <PrivateRoute><BrandDetails></BrandDetails></PrivateRoute>
       },
       {
         path: "/update/:id",
@@ -56,6 +58,10 @@ const router = createBrowserRouter([
       {
         path: "/viewCard",
         element : <ViewCard></ViewCard>
+      },
+      {
+        path: "/latest",
+        element : <NewProduct></NewProduct>
       }
 
     ]

@@ -8,16 +8,8 @@ export const AuthContext = createContext(null)
 
 const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null);
-    const [product, setProduct]= useState([])
     const [loading, setLoading] = useState(true);
-
-    const AddCart = (data) => {        
-        useEffect(() => {
-            setProduct([...product, data]);            
-          }, [])      
-        return       
-    }
-
+    
     const createUser =(email, password) =>{
         return createUserWithEmailAndPassword(auth, email, password)
     } 
@@ -47,10 +39,7 @@ const AuthProvider = ({children}) => {
         logIn,
         user,
         logOut,
-        loading,
-        AddCart,
-        product    
-
+        loading       
     }
     return (
         <AuthContext.Provider value={shareData} >
