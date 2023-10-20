@@ -1,19 +1,17 @@
 import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../AuthContext/AuthProvider";
-import swal from "sweetalert";
 
 
 const ViewDetails = () => {
-    const {AddCart} = useContext(AuthContext);
+    const {addCart,user} = useContext(AuthContext)
+    const email = user.email
+    
     const data = useLoaderData();
     const  {name, image, description, price, rating} = data 
     const handleClick = () =>{
-        AddCart(data)
-        swal({
-            text: "Product added Successfully",
-            timer: 2000
-          });
+        const value ={email,data}
+        addCart(value)        
     }
     return (
         <div>

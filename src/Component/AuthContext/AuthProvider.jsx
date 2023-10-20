@@ -2,6 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
+import swal from 'sweetalert'
 
 export const AuthContext = createContext(null)
 
@@ -12,7 +13,29 @@ const AuthProvider = ({children}) => {
     
     const createUser =(email, password) =>{
         return createUserWithEmailAndPassword(auth, email, password)
-    } 
+    }
+    
+    const addCart = (data) =>{
+        fetch('http://localhost:5000/cart', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if(data.insertedId){
+                    swal({
+                        title: "Good job!",
+                        text: "You Successfully Add Product",
+                        icon: "success",
+                        button: "Add More",
+                      });                   
+                }
+            })      
+    }
     
     const logIn = (email, password) => {
         setLoading(true);
@@ -39,7 +62,8 @@ const AuthProvider = ({children}) => {
         logIn,
         user,
         logOut,
-        loading       
+        loading,
+        addCart       
     }
     return (
         <AuthContext.Provider value={shareData} >
