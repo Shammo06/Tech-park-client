@@ -1,6 +1,6 @@
-# Social Event Management
+# TECH PARK
 
-# [Live Link]()
+# [Live Link](https://tech-park-92436.web.app)
 
 
 Tech Park Project Feature:

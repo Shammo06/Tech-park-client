@@ -3,6 +3,7 @@ import { AuthContext } from "./AuthContext/AuthProvider";
 import { useContext } from "react";
 
 
+
 const Navbar = () => {
     const {user,logOut} = useContext(AuthContext)
     console.log(user)
@@ -37,10 +38,10 @@ const Navbar = () => {
             }           
             </div>
         </div>
-        <div className="flex justify-center md:gap-8 gap-4   font-semibold text-purple-50 bg-indigo-600 pb-10">
+        <div className="flex justify-center md:gap-8 gap-4  font-semibold text-purple-50 bg-indigo-600 pb-10">
           <NavLink to="/"><h1>Home</h1></NavLink>
           <NavLink to="/addProduct"><h1>Add Product</h1></NavLink>
-          <NavLink to="/product"><h1>Product</h1></NavLink>
+          <NavLink><h1>Product</h1></NavLink>
           <NavLink to="/latest"><h1>New Arrival</h1></NavLink>
         </div>
 
