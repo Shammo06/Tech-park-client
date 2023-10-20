@@ -48,17 +48,17 @@ const router = createBrowserRouter([
       {
         path: "/update/:id",
         element: <PrivateRoute><Update></Update></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`)        
+        loader: ({ params }) => fetch(`https://tech-park-server-abamnbza9-shammo06.vercel.app/product/${params.id}`)        
       },
       {
         path: "/details/:id",
         element: <PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`)
+        loader: ({ params }) => fetch(`https://tech-park-server-abamnbza9-shammo06.vercel.app/product/${params.id}`)
       },
       {
         path: "/viewCart",
         element : <PrivateRoute><ViewCard></ViewCard></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/cart')
+        loader: () => fetch('https://tech-park-server-abamnbza9-shammo06.vercel.app/cart')
       },
       {
         path: "/latest",

@@ -13,7 +13,7 @@ const BrandDetails = () => {
     const brandName = params.brand
     
     useEffect(()=>{
-        fetch(`http://localhost:5000/products/${brandName}`)
+        fetch(`https://tech-park-server-abamnbza9-shammo06.vercel.app/products/${brandName}`)
         .then(res => res.json())
         .then(data=> setProduct(data))
     })

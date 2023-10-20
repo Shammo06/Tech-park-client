@@ -16,7 +16,7 @@ const AuthProvider = ({children}) => {
     }
     
 const addCart = (data) =>{
-        fetch('http://localhost:5000/cart', {
+        fetch('https://tech-park-server-abamnbza9-shammo06.vercel.app/cart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

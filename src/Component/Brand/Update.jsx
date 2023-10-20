@@ -13,7 +13,7 @@ const Update = () => {
         const type = e.target.type.value  
         const product = {name,brand,image,type,price,rating} 
         
-        fetch(`http://localhost:5000/product/${_id}`, {
+        fetch(`https://tech-park-server-abamnbza9-shammo06.vercel.app/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

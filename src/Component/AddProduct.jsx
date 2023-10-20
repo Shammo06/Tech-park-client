@@ -12,7 +12,7 @@ const AddProduct = () => {
         const type = e.target.type.value  
         const product = {name,brand,image,type,price,description,rating} 
         
-        fetch('http://localhost:5000/products', {
+        fetch('https://tech-park-server-abamnbza9-shammo06.vercel.app/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

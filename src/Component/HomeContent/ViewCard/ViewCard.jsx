@@ -17,7 +17,7 @@ const ViewCard = () => {
 
     const handleClick=(id) => {
            
-        fetch(`http://localhost:5000/cart/${id}`, {
+        fetch(`https://tech-park-server-abamnbza9-shammo06.vercel.app/cart/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

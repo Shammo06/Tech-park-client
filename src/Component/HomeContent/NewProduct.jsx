@@ -7,7 +7,7 @@ const NewProduct = () => {
     const navigate = useNavigate();
     
     useEffect(()=>{
-        fetch('http://localhost:5000/latest')
+        fetch('https://tech-park-server-abamnbza9-shammo06.vercel.app/latest')
         .then(res => res.json())
         .then(data=> setProduct(data))
     })
