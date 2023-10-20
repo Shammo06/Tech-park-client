@@ -6,7 +6,7 @@ import swal from "sweetalert";
 
 
 const Registration = () => {
-    const {createUser} = useContext(AuthContext);
+    const {createUser,logOut} = useContext(AuthContext);
     const handleSubmit = e => {
         e.preventDefault();
         const name = e.target.name.value;
@@ -43,7 +43,8 @@ const Registration = () => {
                 displayName: name,
                 photoURL:photo
             })
-               
+            logOut()
+            swal("Successfully Register Go to logIn")               
         })
         .catch((error) => {
             console.log(error.message)

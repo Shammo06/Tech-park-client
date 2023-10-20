@@ -1,8 +1,12 @@
-# React + Vite
+# Social Event Management
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# [Live Link]()
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Tech Park Project Feature:
+
+- Use Firebase for Authentication
+- Use MongoDB as Database
+- Sweet Alert use for user understanding
+- Email And Google Authentication Use
+- Private Route for user security

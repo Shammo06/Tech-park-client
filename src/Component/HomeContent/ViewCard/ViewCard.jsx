@@ -1,6 +1,7 @@
 import { useContext, useState} from "react";
 import { AuthContext } from "../../AuthContext/AuthProvider";
 import { useLoaderData } from "react-router-dom";
+import swal from "sweetalert";
 
 
 const ViewCard = () => {
@@ -15,23 +16,23 @@ const ViewCard = () => {
     
     
 
-    const handleClick=(id) => {
-           
-        fetch(`https://tech-park-server-abamnbza9-shammo06.vercel.app/cart/${id}`, {
+    const handleClick=(id) => {      
+
+            fetch(`https://tech-park-server-abamnbza9-shammo06.vercel.app/cart/${id}`, {
             method: 'DELETE'
-        })
+             })
             .then(res => res.json())
             .then(data => {
                 if (data.deletedCount > 0) {
-                    console.log('deleted successfully');
+                    swal("Deleted!", "Your product has been removed.", "success");
+                    
                     const remaining = product.filter(item => item._id !== id);
                     setProduct(remaining);
                     
                 }
             })
-    }
-
-    
+        }
+         
 
     return (
         <div>
