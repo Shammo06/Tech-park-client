@@ -43,7 +43,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/:brand",
-        element: <PrivateRoute><BrandDetails></BrandDetails></PrivateRoute>
+        element: <PrivateRoute><BrandDetails></BrandDetails></PrivateRoute>,
+        
       },
       {
         path: "/update/:id",

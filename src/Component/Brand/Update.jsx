@@ -36,7 +36,8 @@ const Update = () => {
     }
     return (
         <div>
-        <div className="hero min-h-screen bg-base-200">       
+            <h1 className="text-3xl font-bold text-center">Change Product Details</h1>
+        <div className="hero  bg-base-200">       
             <div className="card flex-shrink-0 w-full  shadow-2xl bg-base-100">
             <form onSubmit={handleSubmit}  className="card-body grid grid-cols-2">
                 <div className="form-control">
@@ -76,8 +77,8 @@ const Update = () => {
                 <input type="text" name="rating" defaultValue={rating} placeholder="" className="input input-bordered" required />
                 </div>
                 
-                <div className="form-control mt-6">
-                <button className="btn btn-primary">Update Product</button>
+                <div className="form-control mt-6 col-span-2 mx-auto">
+                <button className="btn btn-primary md:w-96">Update Product</button>
                 </div>
             </form>
             </div>

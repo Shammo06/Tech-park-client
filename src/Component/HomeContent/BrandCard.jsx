@@ -19,13 +19,13 @@ const BrandCard = () => {
     }
     
     return (
-        <div className="px-20">
+        <div className="lg:pl-40 md:pl-24 pl-10 pb-10">
             <h1 className="my-10 text-5xl font-bold text-center">Our Reliable Brands</h1>
-           <div  className="grid grid-cols-3 gap-3">
+           <div  className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
            {
                 brand.map(data => 
                 <div key={data.id}>
-                    <img onClick={()=>handleClick(data.brand) } className="md:h-72 md:w-68" src={data.url} alt="" />    
+                    <img onClick={()=>handleClick(data.brand) } className="card md:h-64 md:w-64" src={data.url} alt="" />    
                 </div>
                 )
             }         

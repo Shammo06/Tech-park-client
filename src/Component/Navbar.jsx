@@ -37,7 +37,7 @@ const Navbar = () => {
             }           
             </div>
         </div>
-        <div className="flex justify-center gap-8 bg-base-100 font-semibold text-cyan-200">
+        <div className="flex justify-center md:gap-8 gap-4  bg-base-100 font-semibold text-cyan-200 pb-10">
           <NavLink to="/"><h1>Home</h1></NavLink>
           <NavLink to="/addProduct"><h1>Add Product</h1></NavLink>
           <NavLink to="/product"><h1>Product</h1></NavLink>

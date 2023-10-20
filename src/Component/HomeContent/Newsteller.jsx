@@ -2,7 +2,7 @@
 
 const Newsteller = () => {
     return (
-        <div className="flex bg-red-400 justify-between h-80 px-14 lg:px-24 pt-32">
+        <div className="lg:flex bg-red-400 justify-between h-80 px-14 lg:px-24 lg:pt-32 pt-10">
             <div className="">
                 <h1 className="text-4xl font-semibold">Subscribe To Our Newsletter</h1>
                 <p>Get all the latest information on Events, Sales and Offers.</p>

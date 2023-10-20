@@ -18,9 +18,9 @@ const NewProduct = () => {
 
     }
     return (
-        <div className="px-20">
+        <div className="md:px-36 lg:px-20 px-3 py-5">
             <h1 className="my-10 text-5xl font-bold text-center"> What's New </h1>
-           <div   className="grid grid-cols-3 gap-3">
+           <div   className="grid lg:grid-cols-3 gap-3">
            {
             product.map(data =>
                 <div key={data._id} onClick={() => handleClick(data.brand)} className="card w-96 bg-base-100 shadow-xl">

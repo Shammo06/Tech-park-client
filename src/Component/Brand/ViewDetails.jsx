@@ -15,13 +15,13 @@ const ViewDetails = () => {
     }
     return (
         <div>
-            <div className="card w-96 mx-auto glass">
-            <figure><img src={image} /></figure>
+            <div className="flex glass px-20 py-10">
+            <img className="w-96" src={image} />
             <div className="card-body">
-                <h2 className="card-title">{name}</h2>
+                <h2 className="card-title font-bold">{name}</h2>
                 <p>{description}</p>
-                <p>Rating : {rating}/5</p>
-                <p>{price}</p>
+                <p className="font-bold">Rating : {rating}/5</p>
+                <p className="font-bold">Price: {price} TK</p>
                 <div className="card-actions justify-end">
                 <button onClick={handleClick} className="btn btn-primary">Add to cart</button>
                 </div>

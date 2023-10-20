@@ -6,9 +6,9 @@ import Newsteller from './HomeContent/Newsteller';
 const Home = () => {
     return (
         <div>
-            <Banner></Banner> 
-            <BrandCard></BrandCard>
+            <Banner></Banner>             
             <NewProduct></NewProduct> 
+            <BrandCard></BrandCard>
             <Newsteller></Newsteller>          
         </div>
     );
